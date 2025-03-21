@@ -58,8 +58,8 @@ body {
 
 /* SMOOTH ZOOM EFFECT */
 .logo img:hover {
-    transform: scale(1.1); /* Slight zoom */
-    opacity: 0.95; /* Soft fade */
+    transform: scale(1.1); 
+    opacity: 0.95; 
 }
 
 
@@ -81,7 +81,7 @@ body {
 }
 
 .header-container + .topnav {
-    margin-top: -1px; /* Adjust this value if needed */
+    margin-top: -1px; 
 }
 
 /* NAVIGATION LINKS */
@@ -152,7 +152,7 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     position: relative;
-    border-right: 2px solid floralwhite; /* Divider only on large screens */
+    border-right: 2px solid floralwhite; 
 }
 
 /* NAVIGATION HOVER EFFECT */
@@ -812,50 +812,50 @@ body {
 .column-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
+    object-fit: cover; 
     object-position: center; 
 }
 
 .column1, .middle, .side {
     display: flex;
-    flex-direction: column; /* Stack image and text vertically */
-    justify-content: flex-end; /* Push text to the bottom of the block */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text below the image */
-    padding: 20px; /* Add padding around each block */
-    width: 100%; /* Ensure full width */
-    max-width: 350px; /* Maximum block width */
-    box-sizing: border-box; /* Prevent padding from affecting layout */
-    overflow: hidden; /* Prevent overflow of content */
-    flex: 1 1 30%; /* Allow blocks to take 30% of the container */
-    border: 1px solid #ddd; /* Optional: adds border for definition */
-    border-radius: 8px; /* Optional: adds rounded corners to the blocks */
-    background-color: #f8f8f8; /* Optional: adds background color to the blocks */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds slight shadow for depth */
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center; 
+    text-align: center; 
+    padding: 20px; 
+    width: 100%; 
+    max-width: 400px; 
+    box-sizing: border-box; 
+    overflow: hidden; 
+    flex: 1 1 30%; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    background-color: #f8f8f8; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: 10px;
 }
 
 .column-image-container {
-    width: 100%; /* Ensure full width of the block */
-    height: 200px; /* Set a fixed height for the image container */
-    overflow: hidden; /* Hide overflowing image parts */
+    width: 100%; 
+    height: 200px; 
+    overflow: hidden; 
     display: flex;
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
+    justify-content: center; 
+    align-items: center; 
     margin-bottom: 15px;
 }
 
 
 .column1 p, .column1 b {
-    margin-top: 10px; /* Adds space between image and text */
-    font-size: 16px; /* Adjust text size */
+    margin-top: 10px; 
+    font-size: 16px;
     color: #333;
 }
 
-/* Ensure text is properly centered */
+
 .column1 h2 {
-    font-size: 18px; /* Adjust heading size */
-    color: #2c3e50; /* Darker color for headings */
+    font-size: 18px; 
+    color: #2c3e50; 
     margin-bottom: 5px; 
 }
 
@@ -888,77 +888,77 @@ body {
 
 @media (max-width: 1200px) {
     .column1, .middle, .side {
-        max-width: 320px; /* Slightly smaller blocks for medium screens */
+        max-width: 700px;
     }
 }
 
 @media (max-width: 768px) {
     .column1, .middle, .side {
-        max-width: 100%; /* Full width on small screens */
-        flex: 1 1 100%; /* Blocks take full width */
+        max-width: 100%; 
+        flex: 1 1 100%; 
     }
 
     .column-image-container {
-        height: 180px; /* Adjust image height for mobile */
+        height: 180px; 
     }
 
     .column1 p, .column1 b {
-        font-size: 14px; /* Adjust text size for mobile */
+        font-size: 14px; 
     }
 }
 
 @media (max-width: 480px) {
     .column1, .middle, .side {
-        max-width: 100%; /* Full width blocks on mobile */
-        padding: 10px; /* Reduce padding for small screens */
+        max-width: 100%; 
+        padding: 10px; 
     }
 
     .column-image-container {
-        height: 160px; /* Further adjust image height for mobile */
+        height: 160px; 
     }
 
     .column1 h2 {
-        font-size: 16px; /* Smaller heading for mobile */
+        font-size: 16px; 
     }
 
     .column1 p, .column1 b {
-        font-size: 12px; /* Smaller text for mobile */
+        font-size: 12px;
     }
 }
 
 .rotate-image {
-    transform: rotate(270deg); /* Adjust the degree as needed */
+    transform: rotate(270deg); 
 }
 @media (max-width: 1200px) {
     .column1, .middle, .side {
-        max-width: 300px; /* Slightly smaller blocks for medium screens */
+        max-width: 300px; 
     }
 }
 
 @media (max-width: 768px) {
     .column1, .middle, .side {
-        max-width: 100%; /* Full width blocks on small screens */
-        flex: 1 1 100%; /* Blocks take full width on small screens */
+        max-width: 100%; 
+        flex: 1 1 100%; 
     }
 
-    /* Adjust image container height on small screens */
+    
     .column-image-container {
-        height: 200px; /* Adjust image height for mobile */
+        height: 200px; 
     }
 }
 
 @media (max-width: 480px) {
     .column1, .middle, .side {
-        max-width: 100%; /* Ensure blocks take full width on mobile */
-        padding: 15px; /* Reduce padding for small screens */
+        max-width: 100%; 
+        padding: 15px; 
     }
 
     .column-image-container {
-        height: 180px; /* Further adjust image height for mobile */
+        height: 180px; 
     }
 }
 
-/* Remove animation from holiday products */
+
 .row {
     display: flex;
     justify-content: space-around;
