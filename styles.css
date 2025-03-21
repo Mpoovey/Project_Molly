@@ -347,15 +347,15 @@ body {
     opacity: 0;
     transform: translateX(100%);
     transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-    width: 100%; /* Adjust to ensure it fits correctly in each container */
-    max-width: 350px; /* Control the max width of each review */
+    width: 100%; 
+    max-width: 350px; 
     margin: 0 auto;
 }
 
 .column.visible {
     opacity: 1;
     transform: translateX(0);
-    background-color: #ffffff; /* Ensure the white background remains */
+    background-color: #ffffff; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -822,13 +822,13 @@ body {
     justify-content: flex-end;
     align-items: center; 
     text-align: center; 
-    padding: 20px; 
+    padding: 10px; 
     width: 100%; 
     max-width: 400px; 
     box-sizing: border-box; 
     overflow: hidden; 
     flex: 1 1 30%; 
-    border: 1px solid #ddd; 
+    border: 3px solid darkolivegreen; 
     border-radius: 8px; 
     background-color: #f8f8f8; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
