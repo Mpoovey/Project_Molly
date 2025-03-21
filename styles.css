@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
 /* HEADER CONTAINER */
@@ -301,14 +302,18 @@ body {
 }
 
 .reviews {
+    background-color: darkolivegreen;  /* Light gray or white background */
+    padding: 30px 0;  /* Adds vertical padding to the section */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    padding-bottom: 50px;
     flex-wrap: wrap;
     gap: 20px;
     color: #cabba4;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .columns {
@@ -317,6 +322,9 @@ body {
     justify-content: space-around;
     gap: 20px;
     color: black;
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
 }
 
 @keyframes flyInFromRight {
@@ -332,14 +340,23 @@ body {
 
 /* These are the review column styles */
 .column {
-    flex: 1;
-    text-align: center;
-    background-color: gainsboro;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     opacity: 0;
-    transform: translateX(100%); /* Changed to translateX for horizontal animation */
-    transition: transform 1s ease-out, opacity 1s ease-out;
-    margin: 10px; 
-    padding: 20px;  
+    transform: translateX(100%);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    width: 100%; /* Adjust to ensure it fits correctly in each container */
+    max-width: 350px; /* Control the max width of each review */
+    margin: 0 auto;
+}
+
+.column.visible {
+    opacity: 1;
+    transform: translateX(0);
+    background-color: #ffffff; /* Ensure the white background remains */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .column.animate {
@@ -358,6 +375,19 @@ body {
     }
 }
 
+@media (min-width: 768px) {
+    .column {
+        animation-duration: 1s; /* Adjust animation speed for larger screens */
+    }
+    column {
+        width: 45%;
+    }
+}
+@media (min-width: 1024px) {
+    .column {
+        width: 30%; /* Three reviews per row on larger screens */
+    }
+}
 /*LASER ENGRAVING STYLES*/
 
 .aboutlaser {
@@ -780,14 +810,53 @@ body {
 }
 
 .column-image {
-    width: 500px !important;
-    height: 300px !important;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    object-position: center; 
 }
 
-.column1 {
-    width: auto;
-    flex-grow: 1;
+.column1, .middle, .side {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    justify-content: flex-end; /* Push text to the bottom of the block */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text below the image */
+    padding: 20px; /* Add padding around each block */
+    width: 100%; /* Ensure full width */
+    max-width: 350px; /* Maximum block width */
+    box-sizing: border-box; /* Prevent padding from affecting layout */
+    overflow: hidden; /* Prevent overflow of content */
+    flex: 1 1 30%; /* Allow blocks to take 30% of the container */
+    border: 1px solid #ddd; /* Optional: adds border for definition */
+    border-radius: 8px; /* Optional: adds rounded corners to the blocks */
+    background-color: #f8f8f8; /* Optional: adds background color to the blocks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds slight shadow for depth */
+    margin: 10px;
+}
+
+.column-image-container {
+    width: 100%; /* Ensure full width of the block */
+    height: 200px; /* Set a fixed height for the image container */
+    overflow: hidden; /* Hide overflowing image parts */
+    display: flex;
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    margin-bottom: 15px;
+}
+
+
+.column1 p, .column1 b {
+    margin-top: 10px; /* Adds space between image and text */
+    font-size: 16px; /* Adjust text size */
+    color: #333;
+}
+
+/* Ensure text is properly centered */
+.column1 h2 {
+    font-size: 18px; /* Adjust heading size */
+    color: #2c3e50; /* Darker color for headings */
+    margin-bottom: 5px; 
 }
 
 .aboutholiday1 p {
@@ -817,32 +886,76 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
+@media (max-width: 1200px) {
+    .column1, .middle, .side {
+        max-width: 320px; /* Slightly smaller blocks for medium screens */
+    }
+}
+
 @media (max-width: 768px) {
-    .aboutholiday-container {
-        flex-direction: column; 
-        gap: 20px; 
+    .column1, .middle, .side {
+        max-width: 100%; /* Full width on small screens */
+        flex: 1 1 100%; /* Blocks take full width */
     }
 
-    .aboutholiday1, .aboutholiday2 {
-        flex: none; 
-        width: 100%; 
+    .column-image-container {
+        height: 180px; /* Adjust image height for mobile */
+    }
+
+    .column1 p, .column1 b {
+        font-size: 14px; /* Adjust text size for mobile */
     }
 }
 
 @media (max-width: 480px) {
-    .aboutpet-container {
-        flex-direction: column; 
-        gap: 15px; 
+    .column1, .middle, .side {
+        max-width: 100%; /* Full width blocks on mobile */
+        padding: 10px; /* Reduce padding for small screens */
     }
 
-    .aboutholiday1, .aboutholiday2 {
-        flex: none; 
-        width: 100%; 
+    .column-image-container {
+        height: 160px; /* Further adjust image height for mobile */
+    }
+
+    .column1 h2 {
+        font-size: 16px; /* Smaller heading for mobile */
+    }
+
+    .column1 p, .column1 b {
+        font-size: 12px; /* Smaller text for mobile */
     }
 }
 
 .rotate-image {
     transform: rotate(270deg); /* Adjust the degree as needed */
+}
+@media (max-width: 1200px) {
+    .column1, .middle, .side {
+        max-width: 300px; /* Slightly smaller blocks for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .column1, .middle, .side {
+        max-width: 100%; /* Full width blocks on small screens */
+        flex: 1 1 100%; /* Blocks take full width on small screens */
+    }
+
+    /* Adjust image container height on small screens */
+    .column-image-container {
+        height: 200px; /* Adjust image height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .column1, .middle, .side {
+        max-width: 100%; /* Ensure blocks take full width on mobile */
+        padding: 15px; /* Reduce padding for small screens */
+    }
+
+    .column-image-container {
+        height: 180px; /* Further adjust image height for mobile */
+    }
 }
 
 /* Remove animation from holiday products */
@@ -1276,9 +1389,142 @@ body {
     }
 }
 
-.column-image, .item-image img {
+.item-image img {
     max-width: 100%;
     height: auto;
     display: block;
     object-fit: contain; /* Ensure the image fits within the container without being cropped */
+}
+
+@media screen and (max-width: 600px) {
+    .header-container {
+        text-align: center;
+    }
+
+    .header-image {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .topnav a {
+        display: block;
+        padding: 8px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column1 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .column1 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+    }
+
+    @media screen and (max-width: 600px) {
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .column {
+        width: 90%;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .column h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .column p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .column p:first-of-type {
+        font-size: 20px; /* Makes the stars bigger */
+    }
+}
+@media screen and (max-width: 600px) {
+    .reviews {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .column h2 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .column p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .column p:first-of-type {
+        font-size: 20px; /* Makes the stars bigger */
+    }
+}
+
+
 }
