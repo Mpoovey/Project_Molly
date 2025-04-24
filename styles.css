@@ -10,6 +10,27 @@ body {
     background-color: #f4f4f4;
     overflow-x: hidden;
 }
+.add-to-cart-button {
+    background-color: darkolivegreen;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.add-to-cart-button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
 
 /* HEADER CONTAINER */
 .header-container {
@@ -29,9 +50,9 @@ body {
 
 /* HEADER STYLING */
 .header {
-    height: 60vh; /* Increased height for more space */
-    min-height: 500px; /* Ensures it doesn’t shrink too much */
-    padding: 70px 0; /* Adds more breathing room */
+    height: 60vh; 
+    min-height: 500px;
+    padding: 70px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,12 +65,12 @@ body {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-    padding: 30px 0; /* Adds extra spacing around the logo */
+    padding: 30px 0; 
 }
 
 /* LOGO IMAGE */
 .logo img {
-    max-width: 42%; /* Keeps the logo large but responsive */
+    max-width: 42%;
     height: auto;
     object-fit: contain;
     filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.25));
@@ -64,6 +85,9 @@ body {
 
 
 .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,6 +110,9 @@ body {
 
 /* NAVIGATION LINKS */
 .topnav a {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: inline-block;
     padding: 12px 22px;
     font-weight: 600;
@@ -126,6 +153,9 @@ body {
 
 /* NAVIGATION BAR */
 .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,12 +167,15 @@ body {
     position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     flex-wrap: wrap;
-    margin: 0; /* Ensure no extra spacing */
-    border-top: none; /* Remove any unwanted border */
+    margin: 0;
+    border-top: none;
 }
 
 /* NAVIGATION LINKS */
 .topnav a {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: inline-block;
     padding: 12px 22px;
     font-weight: 600;
@@ -176,7 +209,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Add dividers between links */
+
 .topnav a:not(:last-child) {
     border-right: 2px solid floralwhite;
     padding-right: 20px;
@@ -216,7 +249,7 @@ body {
     font-size: 40px;
 }
 
-/*These are the popular product styles */
+/*popular product styles */
 .column1, .column1.middle, .column1.side, .column1.last {
     flex: 1;
     text-align: center;
@@ -227,7 +260,6 @@ body {
     background-color: #f4f4f4;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    /* Removed animation */
 }
 
 .column1,.column1.middle, .column1.side, .column1.last:hover {
@@ -254,7 +286,7 @@ body {
 .column1 img, .column1.middle img, .column1.side img {
     width: 100%;
     height: auto;
-    object-fit: cover; /* Ensure the image covers the container without being distorted */
+    object-fit: cover; 
 }
 
 @media (max-width: 768px) {
@@ -302,8 +334,8 @@ body {
 }
 
 .reviews {
-    background-color: darkolivegreen;  /* Light gray or white background */
-    padding: 30px 0;  /* Adds vertical padding to the section */
+    background-color: darkolivegreen;  
+    padding: 30px 0;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,7 +393,7 @@ body {
 
 .column.animate {
     opacity: 1;
-    transform: translateX(0); /* Changed to translateX for horizontal animation */
+    transform: translateX(0); 
 }
 
 @keyframes easeIn {
@@ -377,7 +409,7 @@ body {
 
 @media (min-width: 768px) {
     .column {
-        animation-duration: 1s; /* Adjust animation speed for larger screens */
+        animation-duration: 1s;
     }
     column {
         width: 45%;
@@ -385,7 +417,7 @@ body {
 }
 @media (min-width: 1024px) {
     .column {
-        width: 30%; /* Three reviews per row on larger screens */
+        width: 30%; 
     }
 }
 /*LASER ENGRAVING STYLES*/
@@ -397,7 +429,7 @@ body {
     border-radius: 8px;
     margin: 30px 0;
     width: 100%;
-    box-shadow: none; /* Remove shadow */
+    box-shadow: none; 
 }
 
 .full-width {
@@ -415,6 +447,7 @@ body {
     font-size: 1.3em;
     line-height: 1.8;
     color: black;
+    text-align: center;
 }
 
 .aboutlaser-container {
@@ -425,7 +458,7 @@ body {
     background-color: #a4a379;
     border-radius: 8px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    margin: 0; /* Remove margin to eliminate gap */
+    margin: 0; 
     width: 100%;
 }
 
@@ -442,153 +475,99 @@ body {
     
 }
 
+.catagoryp {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.catagoryp h2 {
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
 .laser-image img {
-    max-width: 50%; /* Adjust the size as needed */
+    max-width: 50%; 
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.catagoryp {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 30px 0;
-    color: #333;
-}
-
 .categories {
     display: flex;
-    flex-direction: column;
-    gap: 40px; /* Space between categories */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 4px darkolivegreen;
 }
 
 
 .category-tab {
+    width: calc(25% - 20px); 
+    background-color: #fff;
+    border-radius: 8px, darkolivegreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center;
-    background: #f8f8f8;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    text-align: center;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 4px darkolivegreen;
 }
 
-.category-tab:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
 
 .category-tab img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 12px 0 0 12px;
+    width: 100%;              
+    height: 250px;             
+    object-fit: cover;         
+    object-position: center;  
+    border-radius: 8px 8px 0 0; 
 }
 
+
 .category-info {
-    padding: 20px;
-    flex: 1; /* Takes remaining space */
-    text-align: left;
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 4px darkolivegreen;
 }
 
 .category-info h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
     color: #333;
 }
 
+
 .category-info p {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 14px;
+    color: #555;
     margin-bottom: 15px;
 }
 
-/* Shop Button */
+
 .shop-button {
-    display: inline-block;
-    background: #3e4a3f;
+    background-color: darkolivegreen;
     color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 6px;
+    padding: 10px 15px;
     text-decoration: none;
-    transition: background 0.3s ease;
+    border-radius: 5px;
+    font-size: 14px;
 }
+
 
 .shop-button:hover {
-    background: #2e382f;
+    background-color: #218838;
 }
 
-.category-tab img:hover {
-    transform: scale(1.05); 
-}
-
-.category-text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better readability */
-    color: white;
-    font-size: 1.4em;
-    font-weight: bold;
-    text-align: center;
-    padding: 15px 0;
-    transition: background 0.3s ease-in-out;
-}
-
-.category-tab {
-    position: relative;
-    width: 100%; 
-    height: 200px; 
-    overflow: hidden; 
-}
-
-.category-image {
-    width: 100%;
-    object-fit: cover;
-}
-
-.pet-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover; 
-}
-
-@media (max-width: 1024px) {
-    .categories {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
-}
-
-@media (max-width: 768px) {
-    .categories {
-        grid-template-columns: 1fr; /* Full width for smaller screens */
-    }
-
-    .category-tab {
-        width: 100%;
-        max-width: 320px; /* Prevents oversized images */
-    }
-}
-@media (max-width: 768px) {
-    .category-tab {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .category-tab img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px 12px 0 0;
-    }
-
-    .category-info {
-        padding: 20px;
-    }
-}
 /*Catagories styles*/
 
 .aboutcups-container {
@@ -603,9 +582,9 @@ body {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Set a max width for the container */
-    margin: auto; /* Center the carousel */
-    overflow: hidden; /* Prevent overflow */
+    max-width: 600px; 
+    margin: auto; 
+    overflow: hidden; 
 }
 
 .carousel-images {
@@ -614,10 +593,10 @@ body {
 }
 
 .carousel-images img {
-    width: 100%;  /* Ensure the image fills the container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Prevent zooming or stretching */
-    max-height: 600px; /* Limit the maximum height if necessary */
+    width: 100%;  
+    height: auto; 
+    object-fit: contain; 
+    max-height: 600px; 
 }
 
 
@@ -819,39 +798,47 @@ body {
 .column1, .middle, .side {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center; 
-    text-align: center; 
-    padding: 10px; 
-    width: 100%; 
-    max-width: 400px; 
-    box-sizing: border-box; 
-    overflow: hidden; 
-    flex: 1 1 30%; 
-    border: 3px solid darkolivegreen; 
-    border-radius: 8px; 
-    background-color: #f8f8f8; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px; 
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex: 1 1 30%;
+    border: 3px solid darkolivegreen;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 10px;
 }
 
 .column-image-container {
-    width: 100%; 
+    width: 100%;
     height: 200px; 
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
 }
 
-
-.column1 p, .column1 b {
-    margin-top: 10px; 
-    font-size: 16px;
-    color: #333;
+.column1 img, .middle img, .side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
 }
 
+.column1 p, .column1 b, .middle p, .middle b, .side p, .side b {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center; 
+    visibility: visible; 
+}
 
 .column1 h2 {
     font-size: 18px; 
@@ -958,6 +945,13 @@ body {
     }
 }
 
+.column-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px; 
+    max-height: 600px; 
+    object-fit: cover;
+}
 
 .row {
     display: flex;
@@ -1133,7 +1127,7 @@ body {
 }
 
 
-/*Signs styles*/ 
+
 
 .no-link {
     color: inherit; 
@@ -1225,7 +1219,7 @@ body {
 
 
 
-/*Embroidery styles*/
+
 
 .aboutem {
     display: flex;
@@ -1263,7 +1257,7 @@ body {
     border-radius: 8px;
 }
 
-/*Dye-sub*/
+
 
 .aboutds {
     display: flex;
@@ -1282,25 +1276,68 @@ body {
     text-align: center;
 }
 
+/*Account styles*/
+.body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+.input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.button {
+    width: 100%;
+    padding: 10px;
+    background: darkolivegreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background: #218838;
+}
+.error {
+    color: red;
+    font-size: 12px;
+} 
+
 @media screen and (max-width: 900px) {
     .topnav {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        display: flex;
         width: 100%;
     }
 
     .topnav a {
         width: 100%;
         font-size: 18px;
+        display: flex;
         padding: 14px 0;
-        text-align: center; /* Center align text */
-        border: none !important; /* Remove any dividers */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle separator */
+        text-align: center; 
+        border: none !important; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
     }
 
     .topnav a:last-child {
-        border-bottom: none; /* Remove bottom border from last link */
+        border-bottom: none; 
     }
 }
 
@@ -1330,8 +1367,8 @@ body {
     .topnav {
         flex-direction: column;
         align-items: center;
-        border-top: none; /* Ensure no unwanted borders */
-        box-shadow: none; /* Remove extra shadows in small view */
+        border-top: none; 
+        box-shadow: none; 
         margin: 0;
         padding: 0;
         width: 100%;
@@ -1341,15 +1378,15 @@ body {
         width: 100%;
         font-size: 16px;
         padding: 12px 0;
-        border: none !important; /* Fully remove any borders */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle separator */
+        border: none !important; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
-    .topnav a:last-child {
-        border-bottom: none; /* Remove bottom border from last link */
+    .topnav a:last-child { 
+        border-bottom: none; 
     }
 }
-/* Large Screens */
+
 @media screen and (min-width: 1024px) {
     .header {
         height: 35vh;
@@ -1370,8 +1407,8 @@ body {
     .topnav {
         flex-direction: column;
         align-items: center;
-        border-top: none; /* Ensure no unwanted borders */
-        box-shadow: none; /* Remove extra shadows in small view */
+        border-top: none; 
+        box-shadow: none; 
         margin: 0;
         padding: 0;
     }
@@ -1380,12 +1417,12 @@ body {
         width: 100%;
         font-size: 16px;
         padding: 12px 0;
-        border-right: none; /* REMOVE DIVIDERS */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle separator */
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
     }
 
     .topnav a:last-child {
-        border-bottom: none; /* Remove bottom border from last link */
+        border-bottom: none; 
     }
 }
 
@@ -1393,7 +1430,7 @@ body {
     max-width: 100%;
     height: auto;
     display: block;
-    object-fit: contain; /* Ensure the image fits within the container without being cropped */
+    object-fit: contain; 
 }
 
 @media screen and (max-width: 600px) {
@@ -1482,7 +1519,7 @@ body {
     }
 
     .column p:first-of-type {
-        font-size: 20px; /* Makes the stars bigger */
+        font-size: 20px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -1522,9 +1559,226 @@ body {
     }
 
     .column p:first-of-type {
-        font-size: 20px; /* Makes the stars bigger */
+        font-size: 20px; 
+    }
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.column {
+    width: 100%; 
+    max-width: 400px; 
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 600px) {
+    .reviews {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .column {
+        padding: 10px; 
+    }
+
+    .column h2 {
+        font-size: 16px; 
+    }
+
+    .column p {
+        font-size: 14px; 
+        line-height: 1.4;
+    }
+}
+}
+.categories {
+    display: flex;
+    justify-content: space-between;  /* Space between items */
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    border: 4px darkolivegreen;
+}
+
+/* Each category tab */
+.category-tab {
+    flex: 1;
+    max-width: 300px; /* Keep a nice width */
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    border: 4px darkolivegreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 250px; /* Prevent it from shrinking too much */
+    
+}
+
+.category-tab img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Ensure buttons show up */
+.category-info {
+    padding: 10px 0;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.shop-button:hover {
+    background-color: darkolivegreen;
+}
+
+/* 📱 Mobile View (Adjustments) */
+@media screen and (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-tab {
+        width: 90%;  /* Makes tabs take up more space on mobile */
+        max-width: 400px;  /* But limits the size */
+    }
+}
+
+.category-tab {
+    width: 23%;  /* Keeps each tab size consistent on desktop */
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 250px; /* Prevent it from shrinking too much */
+}
+
+.category-tab img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-info {
+    padding: 10px 0;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: darkolivegreen;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.shop-button:hover {
+    background-color: #218838;
+}
+
+/* Mobile Layout Adjustments (for screens smaller than 768px) */
+@media screen and (max-width: 768px) {
+    .categories {
+        flex-direction: column;  /* Stack the items */
+        align-items: center;  /* Center them */
+    }
+
+    .category-tab {
+        width: 90%;  /* Make each category wider on mobile */
+        max-width: 400px;  /* Set a max width for mobile screens */
+        margin-bottom: 20px;  /* Add space between items */
     }
 }
 
 
+
+@media screen and (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .category-tab {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .category-info h2 {
+        font-size: 18px;
+    }
+
+    .category-info p {
+        font-size: 13px;
+    }
+
+    .shop-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-tab {
+        width: 90%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .category-tab img {
+        height: 150px; /* Adjust height for smaller screens */
+    }
+}
+
+.add-to-cart-button {
+    background-color: darkolivegreen;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.add-to-cart-button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+.green-text {
+    color: green;
+    font-weight: bold;
 }

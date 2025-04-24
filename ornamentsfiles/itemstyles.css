@@ -280,21 +280,21 @@
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Slideshow takes up 50% of space */
+
 .slideshow-container {
     flex: 0 0 50%;
     position: relative;
     max-width: 500px;
 }
 
-/* Text section takes remaining space */
+
 .slider-text {
     flex: 1;
     padding-left: 40px;
     max-width: 500px;
 }
 
-/* Improve heading and paragraph styling */
+
 .slider-text h2 {
     font-size: 28px;
     color: #222;
@@ -307,7 +307,7 @@
     line-height: 1.6;
 }
 
-/* Slideshow adjustments */
+
 .mySlides img {
     width: 100%;
     border-radius: 8px;
@@ -414,7 +414,7 @@
 
 img {
     max-width: 100%;
-    height: auto; /* Maintains aspect ratio */
+    height: auto; 
     display: block;
 }
 
@@ -445,9 +445,9 @@ img {
 
 /* HEADER STYLING */
 .header {
-    height: 60vh; /* Increased height for more space */
-    min-height: 500px; /* Ensures it doesn’t shrink too much */
-    padding: 70px 0; /* Adds more breathing room */
+    height: 60vh; 
+    min-height: 500px; 
+    padding: 70px 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -456,23 +456,23 @@ img {
 
 /* LOGO CONTAINER */
 .logo {
-    text-align: center; /* Center inside the div */
+    text-align: center; 
     width: 100%; 
 }
 
 .header-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align vertically */
+    justify-content: center;
+    align-items: center; 
     width: 100%;
-    padding: 10px 0; /* Add some spacing */
+    padding: 10px 0; 
     background-color: #cabba4;
 }
 
 .header-image {
-    display: block; /* Remove any extra inline spacing */
-    margin: 0 auto; /* Center inside .logo */
-    max-width: 200px; /* Adjust size if needed */
+    display: block; 
+    margin: 0 auto; 
+    max-width: 200px; 
     height: auto;
 }
 
@@ -485,7 +485,7 @@ img {
 
 /* LOGO IMAGE */
 .logo img {
-    max-width: 42%; /* Keeps the logo large but responsive */
+    max-width: 42%; 
     height: auto;
     object-fit: contain;
     filter: drop-shadow(3px 5px 8px rgba(0, 0, 0, 0.25));
@@ -495,12 +495,15 @@ img {
 
 /* SMOOTH ZOOM EFFECT */
 .logo img:hover {
-    transform: scale(1.1); /* Slight zoom */
-    opacity: 0.95; /* Soft fade */
+    transform: scale(1.1);
+    opacity: 0.95; 
 }
 
 
 .topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,11 +521,14 @@ img {
 }
 
 .header-container + .topnav {
-    margin-top: -1px; /* Adjust this value if needed */
+    margin-top: -1px; 
 }
 
 /* NAVIGATION LINKS */
 .topnav a {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: inline-block;
     padding: 12px 22px;
     font-weight: 600;
@@ -574,8 +580,8 @@ img {
     position: relative;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     flex-wrap: wrap;
-    margin: 0; /* Ensure no extra spacing */
-    border-top: none; /* Remove any unwanted border */
+    margin: 0; 
+    border-top: none;
 }
 
 /* NAVIGATION LINKS */
@@ -589,7 +595,7 @@ img {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     position: relative;
-    border-right: 2px solid floralwhite; /* Divider only on large screens */
+    border-right: 2px solid floralwhite; 
 }
 
 /* NAVIGATION HOVER EFFECT */
@@ -613,7 +619,7 @@ img {
     transform: scale(1.05);
 }
 
-/* Add dividers between links */
+
 .topnav a:not(:last-child) {
     border-right: 2px solid floralwhite;
     padding-right: 20px;

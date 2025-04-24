@@ -18,16 +18,45 @@ function loadCart() {
     const cartItemsList = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
 
-    cartItemsList.innerHTML = "";
+    cartItemsList.innerHTML = ""; // Clear the cart display
     let total = 0;
 
     cart.forEach((item, index) => {
         let li = document.createElement("li");
-        li.textContent = `${item.item} - $${item.price.toFixed(2)}`;
+        li.style.marginBottom = "20px";
+
+        if (item.image) {
+            let img = document.createElement("img");
+            img.src = item.image;
+            img.alt = "Product Image";
+            img.style.maxWidth = "100px";
+            img.style.marginRight = "10px";
+            li.appendChild(img);
+        }
+
+        let description = document.createElement("div");
+        description.textContent = `${item.item} - $${item.price.toFixed(2)}`;
+        li.appendChild(description);
+
+        if (item.familyDetails) {
+            let familyInfo = document.createElement("div");
+            familyInfo.style.marginTop = "10px";
+            familyInfo.innerHTML = `
+                <strong>Last Name:</strong> ${item.familyDetails.lastName}<br>
+                <strong>Year:</strong> ${item.familyDetails.year}<br>
+                <strong>Mother:</strong> ${item.familyDetails.motherName || "N/A"}<br>
+                <strong>Father:</strong> ${item.familyDetails.fatherName || "N/A"}<br>
+                ${item.familyDetails.additionalNames.map(entry => `${entry.type}: ${entry.name}`).join("<br>") || ""}
+            `;
+            li.appendChild(familyInfo);
+        }
 
         let removeButton = document.createElement("button");
         removeButton.textContent = "Remove";
-        removeButton.onclick = function () { removeItem(index); };
+        removeButton.style.marginTop = "10px";
+        removeButton.onclick = function () {
+            removeItem(index);
+        };
 
         li.appendChild(removeButton);
         cartItemsList.appendChild(li);
@@ -66,18 +95,18 @@ function sendOrderEmail() {
         .catch((error) => console.error("EmailJS error:", error));
 }
 
-function addToCart(item, price, image) {
+function addToCart(item, price, image, familyDetails = null) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push({ item, price, image });
-    localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart();
+    cart.push({ item, price, image, familyDetails });
+    localStorage.setItem("cart", JSON.stringify(cart)); // Ensure the cart is updated in localStorage
+    loadCart(); // Reload the cart to reflect the changes
 }
 
 function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    loadCart();
+    cart.splice(index, 1); // Remove the item at the specified index
+    localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
+    loadCart(); // Reload the cart to reflect the changes
 }
 
 function clearCart() {

@@ -1,26 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-</head> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Creative Beavers</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .about-wrapper {
+      max-width: 900px;
+      min-height: 80vh;
+      margin: 80px auto;
+      padding: 40px 20px;
+      background: #ffffff;
+      border: 4px solid darkolivegreen;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-wrapper img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid darkolivegreen;
+      margin-bottom: 25px;
+    }
+
+    .about-wrapper h1 {
+      font-size: 36px;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .about-wrapper p {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.7;
+      margin: 15px auto;
+      max-width: 700px;
+    }
+
+    .contact-info {
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      font-size: 16px;
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .contact-info a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-    <div class="header-container">
-        <div class="head">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Logo/Beaverlog.png" alt="Header Image" class="header-image">
-                </a>
-            </div>
-        </div>
+
+  
+  <div class="header-container">
+    <div class="head">
+      <div class="logo">
+        <a href="index.html">
+          <img src="Logo/Beaverlog.png" alt="Header Image" class="header-image" />
+        </a>
+      </div>
     </div>
-    <div class="topnav">
-        <a href='laserengraving.html'>Laser Engraving</a>
-        <a href='signs.html'>Signs</a>
-        <a href='embroidery.html'>Embroidery</a>
-        <a href='dyesub.html'>Dye-Sublimation</a>
-        <a href='aboutus.html'>About Us</a>
-        <a href='contact.html'>Contact</a>
-        <a href='account.html'>Account</a>
+  </div>
+  <div class="topnav">
+    <a href="laserengraving.html">Laser Engraving</a>
+    <a href="signs.html">Signs</a>
+    <a href="embroidery.html">Embroidery</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact</a>
+    <a href="account.html">Account</a>
+  </div>
+
+  <div class="about-wrapper">
+    <img src="Logo/Beaverlog.png" alt="Creative Beavers Logo" />
+    <h1>About Creative Beavers</h1>
+    <p>
+      Creative Beavers is a small, family-run business built on creativity, care, and community. We've been crafting custom pieces from our home in Granite Falls, North Carolina, bringing joy to our customers with thoughtful designs and personal touches. Whether you're looking for a unique gift or something special for yourself, we put heart into every project. Thank you for supporting our family and helping our small business grow!
+    </p>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:creativebeavers25@gmail.com">creativebeavers25@gmail.com</a></p>
+      <p>Phone: (828) 123-4567</p>
+      <p>Location: Granite Falls, North Carolina</p>
     </div>
+  </div>
+
+  <div class="footer">
+    <p>
+        <a href="mailto:creativebeavers25@gmail.com">creativebeavers25@gmail.com</a>
+    </p>
+    <p>&copy; Copyright 2025. All Rights Reserved</p>
+</div>
+
+</body>
+</html>

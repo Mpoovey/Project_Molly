@@ -25,7 +25,6 @@
         <a href="../laserengraving.html">Laser Engraving</a>
         <a href="../signs.html">Signs</a>
         <a href="../embroidery.html">Embroidery</a>
-        <a href="../dyesub.html">Dye-Sublimation</a>
         <a href="../aboutus.html">About Us</a>
         <a href="../contact.html">Contact</a>
         <a href="../account.html">Account</a>
@@ -70,11 +69,68 @@
             <br>
             <h2>Price:</h2>
             <p>$20.00</p>
+             <label for="family-names">Names: <b>(Put N/A if not applicable)</b></label> <br> 
+             <input type="text" id="last-name" name="family-name" placeholder="Last name:">
+             <input type="text" id="year" name="family-name" placeholder="Year:">
+            <input type="text" id="mother-name" name="family-name" placeholder="Mother's name:">
+            <input type="text" id="father-name" name="family-name" placeholder="Father's name:">
+            <div id="additional-names">
+                <input type="text" name="Brother-name" placeholder="Brother's name:">
+                <input type="text" name="Sister-name" placeholder="Sister's name:">
+                <input type="text" name="Dog-name" placeholder="Dog's name:">
+                <input type="text" name="Cat-name" placeholder="Cat's name:">
+            </div>
+            <br>
+            <button type="button" onclick="addTextBox('Brother')">Add Brother +</button>
+            <button type="button" onclick="addTextBox('Sister')">Add Sister +</button>
+            <button type="button" onclick="addTextBox('Dog')">Add Dog +</button>
+            <button type="button" onclick="addTextBox('Cat')">Add Cat +</button>
+            <br><br>
+            <button class="add-to-cart-button" onclick="validateAndAddToCart()">Add to Cart</button>
         </div>
     </div>
     
-
+    <script src="../cart.js"></script>
     <script src="slideshow.js"></script>
+    <script>
+        function addTextBox(type) {
+            const container = document.getElementById("additional-names");
+            const input = document.createElement("input");
+            input.type = "text";
+            input.name = `${type.toLowerCase()}-name`;
+            input.placeholder = `${type}'s name:`;
+            input.dataset.type = type; 
+            container.appendChild(input);
+        }
+
+        function validateAndAddToCart() {
+            const lastName = document.getElementById("last-name").value.trim();
+            const year = document.getElementById("year").value.trim();
+            const motherName = document.getElementById("mother-name").value.trim();
+            const fatherName = document.getElementById("father-name").value.trim();
+            const additionalNames = Array.from(document.querySelectorAll("#additional-names input"))
+                .map(input => ({
+                    type: input.dataset.type || input.placeholder.split("'s")[0], // Use the data attribute or placeholder
+                    name: input.value.trim()
+                }))
+                .filter(entry => entry.name !== "");
+
+            if (!lastName || !year) {
+                alert("Please enter the last name and year.");
+                return;
+            }
+
+            const familyDetails = {
+                lastName,
+                year,
+                motherName,
+                fatherName,
+                additionalNames
+            };
+
+            addToCart('Family Circle Ornament', 20, '../ornaments_pic/Personalize.JPG', familyDetails);
+        }
+    </script>
 </body>
 
 

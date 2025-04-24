@@ -25,7 +25,6 @@
         <a href="../laserengraving.html">Laser Engraving</a>
         <a href="../signs.html">Signs</a>
         <a href="../embroidery.html">Embroidery</a>
-        <a href="../dyesub.html">Dye-Sublimation</a>
         <a href="../aboutus.html">About Us</a>
         <a href="../contact.html">Contact</a>
         <a href="../account.html">Account</a>
@@ -54,8 +53,8 @@
             <p>Keep your beloved dog's memory alive with a stunning custom-engraved memorial. 
                 Featuring your pet’s picture and years of life, this beautifully crafted tribute 
                 ensures their spirit is never forgotten. Our precision engraving captures every detail,
-                 but for the best results, we need a high-quality photo to create a truly lifelike image. 
-                 Order now to create a lasting keepsake that honors your loyal companion in the most heartfelt way.</p>
+                but for the <span class="green-text">best results, we need a high-quality photo to create a truly lifelike image.</span>
+                Order now to create a lasting keepsake that honors your loyal companion in the most heartfelt way.</p>
             <br>
             <h2>Size:</h2>
             <p>12 x 12</p>
@@ -65,13 +64,43 @@
             <br>
             <h2>Price:</h2>
             <p>$20.00</p>
-
-
+            <br>
+            <label for="dog-name">Dog's Name:</label>
+            <input type="text" id="dog-name" name="dog-name" placeholder="Enter your dog's name" required>
+            <br><br>
+            <label for="dog-photo">Upload Photo:</label>
+            <input type="file" id="dog-photo" name="dog-photo" accept="image/*" required>
+            <br><br>
+            <button class="add-to-cart-button" onclick="validateAndAddToCart()">Add to Cart</button>
         </div>
     </div>
     
-
+    <script src="../cart.js"></script>
+    <script src="slideshow.js"></script>
+    
     <script src="../slideshow.js"></script>
+    <script>
+        function validateAndAddToCart() {
+            const dogName = document.getElementById("dog-name").value.trim();
+            const dogPhoto = document.getElementById("dog-photo").files[0];
+
+            if (!dogName) {
+                alert("Please enter your dog's name.");
+                return;
+            }
+
+            if (!dogPhoto) {
+                alert("Please upload a photo of your dog.");
+                return;
+            }
+
+            const reader = new FileReader();
+            reader.onload = function () {
+                addToCart('Paw Prints Pet Memorial', 20, reader.result, dogName);
+            };
+            reader.readAsDataURL(dogPhoto);
+        }
+    </script>
 </body>
 
 
