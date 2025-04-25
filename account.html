@@ -32,34 +32,7 @@
         <p class="error" id="errorMessage"></p>
         <button onclick="signUp()">Create!</button>
     </div>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyAbsu66plsKmEmVFl8lrxqg6O2sTFF3Ko4",
-            authDomain: "creative-beavers-d68e9.firebaseapp.com",
-            projectId: "creative-beavers-d68e9",
-            storageBucket: "creative-beavers-d68e9.firebasestorage.app",
-            messagingSenderId: "8600364835",
-            appId: "1:8600364835:web:f2905e76189797c2084e96",
-            measurementId: "G-SGDLBD5ZFE"
-        };
-        firebase.initializeApp(firebaseConfig);
-        const auth = firebase.auth();
-
-        function signUp() {
-            let email = document.getElementById("email").value;
-            let password = document.getElementById("password").value;
-            let errorMessage = document.getElementById("errorMessage");
-
-            auth.createUserWithEmailAndPassword(email, password)
-                .then((userCredential) => {
-                    alert("Account created successfully!");
-                    console.log("User:", userCredential.user);
-                })
-                .catch((error) => {
-                    errorMessage.textContent = error.message;
-                });
-        }
-    </script>
+    
    
 <div class="footer">
     <p>

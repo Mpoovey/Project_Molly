@@ -18,7 +18,7 @@ function loadCart() {
     const cartItemsList = document.getElementById("cart-items");
     const cartTotal = document.getElementById("cart-total");
 
-    cartItemsList.innerHTML = ""; // Clear the cart display
+    cartItemsList.innerHTML = ""; // clears cart 
     let total = 0;
 
     cart.forEach((item, index) => {
@@ -98,18 +98,18 @@ function sendOrderEmail() {
 function addToCart(item, price, image, familyDetails = null) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push({ item, price, image, familyDetails });
-    localStorage.setItem("cart", JSON.stringify(cart)); // Ensure the cart is updated in localStorage
-    loadCart(); // Reload the cart to reflect the changes
+    localStorage.setItem("cart", JSON.stringify(cart)); //update cart in the storage
+    loadCart(); 
 }
 
 function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.splice(index, 1); // Remove the item at the specified index
-    localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
-    loadCart(); // Reload the cart to reflect the changes
-}
+    cart.splice(index, 1); // removes item 
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    loadCart(); // reloads the cart
 
 function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
 }
+} 
