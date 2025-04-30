@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../ornamentsfiles/itemstyles.css"> 
     <style>
         .slideshow-container img {
-            width: 100%; /* Ensure images fit within the container */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%; 
+            height: auto; 
         }
     </style>
 </head>
@@ -34,6 +34,7 @@
         <a href="../aboutus.html">About Us</a>
         <a href="../contact.html">Contact</a>
         <a href="../account.html">Account</a>
+        <a href='../cart.html'>View Cart</a>
     </div>
     <div class="back-to-holiday">
         <a href="../embroidery.html">Back to Embroidery</a>
@@ -70,10 +71,12 @@
             <br>
             <h2>Price:</h2>
             <p>$30.00</p>
+            <button class="add-to-cart-button" onclick="addToCart('Baby Blanket', 30, '../embroidery_pic/blanket logo.jpg')">Add to Cart</button>
 
 
         </div>
     </div>
+        <script src="../cart.js"></script>
     
 
     <script>

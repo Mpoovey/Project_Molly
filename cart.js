@@ -102,6 +102,8 @@ function addToCart(item, price, image, familyDetails = null) {
     loadCart(); 
 }
 
+
+
 function removeItem(index) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1); // removes item 
@@ -112,4 +114,4 @@ function clearCart() {
     localStorage.removeItem("cart");
     loadCart();
 }
-} 
+}
